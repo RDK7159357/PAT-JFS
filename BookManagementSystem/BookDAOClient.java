@@ -248,7 +248,7 @@ public class BookDAOClient{
                 book = bookDAO.findBookByISBN(ISBN);
                 if(book != null){
                     System.out.println("Book found:");
-                    System.out.println(book.toString());
+                    System.out.println(book);
                 }else{
                     System.out.println("Book not found");
                 }
@@ -260,7 +260,7 @@ public class BookDAOClient{
                 book = bookDAO.findBookByName(name);
                 if(book != null){
                     System.out.println("Book found:");
-                    System.out.println(book.toString());
+                    System.out.println(book);
                 }else{
                     System.out.println("Book not found");
                 }
@@ -271,7 +271,7 @@ public class BookDAOClient{
                 System.out.println("All Books:");
                 System.out.println("ISBN -  Name -  Author -  Year");
                 for(Book b : bookDAO.findAllBooks()){
-                    System.out.println(b.toString());
+                    System.out.println(b); //toString is called implicitly
                 }
                 break;
 
@@ -285,6 +285,7 @@ public class BookDAOClient{
                     for(Book b : books){
                         System.out.println(b.toString());
                     }
+                    System.out.println();
                 }else{
                     System.out.println("No books found by "+author);
                 }
@@ -298,8 +299,9 @@ public class BookDAOClient{
                     System.out.println("Books published in "+year+":");
                     System.out.println("ISBN Name Author Year");
                     for(Book b : books){
-                        System.out.println(b.toString());
+                        System.out.println(b);
                     }
+                    System.out.println();
                 }else{
                     System.out.println("No books found published in "+year);
                 }
