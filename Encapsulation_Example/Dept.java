@@ -59,7 +59,7 @@ public class Dept {
     }
 
     public int hashCode(){
-        return toString().hashCode();
+        return this.toString().hashCode();
     }
 
     public boolean equals(Object obj){
@@ -134,7 +134,7 @@ public class Dept {
     }
 
     public int hashCode(){
-        return toString().hashCode();
+        return this.toString().hashCode();
     }
 
     public boolean equals(Object obj){
