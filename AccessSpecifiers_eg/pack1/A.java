@@ -1,4 +1,4 @@
-package pack1;
+package AccessSpecifiers_eg.pack1;
 
 public class A {
     private int a;

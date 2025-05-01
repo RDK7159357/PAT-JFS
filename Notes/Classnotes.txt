@@ -1,3 +1,11 @@
+Topics:
+-------
+Datatypes & type conversions
+Arrays
+Exceptions
+OOPs
+Collections
+
 type casting (to convert one primitive-primitive type):
 ----------------
 byte b1=123;
@@ -84,13 +92,7 @@ class StringToIntConversion {
 javac StringToIntConversion.java
 java StringToIntConversion 19
 
-Topics:
--------
-Datatypes & type conversions
-Arrays
-Exceptions
-OOPs
-Collections
+
 
 Arrays:
 -------
@@ -215,6 +217,122 @@ class IIIDimArray {
           3  	  	  3		  3
 
 
+Java Programming structure:
+---------------------------
+0) Comments
+i) package declaration
+ii) import statements
+iii) class declaration
+iv) variable declarations
+v) constructors implementation
+vi) methods implementations
+vii) static block
+viii) non-static block
+
+0) Comments
+// single line comment
+/*
+   multi line comment
+*/
+/**
+*  documentation comment
+*
+*/
+
+i) package declaration & import statements
+access specifiers: private, default, protected, public
+access modifiers: abstract, static, final, transient, volatile, native, synchronized
+
+the purpose of package declaration is to access class and its members (vars, constructors, methods) access outside the class and package.
+
+D:\2025SUB1
+	   \pack1
+		A.java
+		B.java
+		C.java
+	   \pack2
+		E.java
+		F.java
+
+// D:\2025SUB1\pack1
+// A.java
+package pack1;
+public class A {
+  private int a;
+  int b;
+  protected int c;
+  public int d;
+
+  public void display() {
+    System.out.println(a);
+    System.out.println(b);
+    System.out.println(c);
+    System.out.println(d);
+  }
+}
+
+// class B is a sub class of class A within the package
+// B.java
+package pack1;
+public class B extends A {
+  public void display() {
+    System.out.println(a); // N
+    System.out.println(b); // Y
+    System.out.println(c); // Y
+    System.out.println(d); // Y
+  }
+}
+
+// class C instantiates class A within the package
+// C.java
+package pack1;
+public class C {
+  public void display() {
+    A a=new A();
+    System.out.println(a.a);
+    System.out.println(a.b);
+    System.out.println(a.c);
+    System.out.println(a.d);
+  }
+}
+
+// D:\2025SUB1\pack2
+// class E is a sub class outside the package
+// E.java
+import pack1.A;
+public class E extends A {
+  public void display() {
+    System.out.println(a); // N
+    System.out.println(b); // N
+    System.out.println(c); // Y
+    System.out.println(d); // Y
+  }
+}
+
+// class F instantiates class A outside the package
+// F.java
+import pack1.A;
+public class F {
+  public void display() {
+    A a=new A();
+    System.out.println(a.a); // N
+    System.out.println(a.b); // N
+    System.out.println(a.c); // N
+    System.out.println(a.d); // Y
+  } 
+}
+
+
+
+OOPs (Object Oriented Programming):
+===================================
+i) Encapsulation
+ii) Abstraction
+iii) Inheritance
+iv) Polymorphism
+v) Message Passing
+
+i) Encapsulation
 
 
 
