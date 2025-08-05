@@ -15,4 +15,4 @@ class EP_client {
 //ramadugudhanush@Ramadugus-MacBook-Pro PAT JFS % javac abstractclass/*.java
 // ramadugudhanush@Ramadugus-MacBook-Pro PAT JFS % java -cp . abstractclass.EP_client Sales 106
 // Sales Emp Payroll
-// Emp type Sales Emp id 106 salary 100.0
+// Emp type Sales Emp id 106 salary 100.0 
